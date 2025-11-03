@@ -5,17 +5,20 @@
     "code-runner.showExecutionMessage": false,
     "code-runner.clearPreviousOutput": true,
     "code-runner.executorMap": {
-        // "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        // "cpp": "cd $dir && g++ -std=c++14 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         // "python": "\"$pythonPath\" $fullFileName",
         "python": "python ./main.py",
     },
+    "makefile.configureOnOpen": false,
+
+    // Python test settings, requires module 'pytest'
+    // - verify: python -m pytest --version --> 8.4.2
+    // - install module 'pytest': pip install pytest
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
     "python.testing.unittestArgs": [
         "-v", "-s", "${workspaceFolder}/tests", "-p", "*_test*.py"
     ],
-    "python.testing.pytestEnabled": false,
-    "python.testing.unittestEnabled": true,
-    "makefile.configureOnOpen": false,
 
     // Editor settings
     "editor.detectIndentation": false,
@@ -53,17 +56,6 @@
     }
 }
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Java settings for VSCode:
-//  - https://code.visualstudio.com/docs/languages/java
-//  - https://code.visualstudio.com/docs/java/java-tutorial
-// 
-// VSCode Extension for Java development:
-//  - Extension Pack for Java (Microsoft)
-//    https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack
-// 
-//  - Java Code Runner (Jun Han)
-//    https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
-// 
 // VSCode global settings file and project caches:
 //  - Windows: '%APPDATA%/Code/User' | 'C:/Users/<user>/AppData/Roaming/Code/User'
 //  - MacOS:   '~/Library/Application\ Support/Code/User'
