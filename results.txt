@@ -1,0 +1,11 @@
+python main.py
+
+same Calculator instance
+ 1: c1.add(1, 2)		-> 3
+ 2: c2.add(8, 3)		-> 11
+ 3: c1.add("1", "1")	-> 2
+ 4: c1.add("X", "V")	-> 15
+ 5: c2.factorize(99)	-> [3, 3, 11]
+ 6: c1.add("1", "1.600")	-> 2.6
+ 7: c1.add("three", "1.600")	-> 4.6
+ 8: c1.add("cinco", "siete")	-> 12.0
